@@ -1,6 +1,8 @@
 let inputField = document.querySelector('.inputField');
 const taskList = document.querySelector('.taskList')
+var nameUser = prompt('Привет, как твое имя?')
 
+alert('Привет, ' + nameUser + '. Чтобы добавить задание после ввода нажми - Enter. Чтобы отметить выполнено - нажми один раз на задание, чтобы удалить - два');
 
 inputField.addEventListener('keydown', function(event){
     if(event.code == 'Enter') {
@@ -16,5 +18,5 @@ inputField.addEventListener('keydown', function(event){
         task.addEventListener('dblclick', function(){
             taskList.removeChild(task);
         })
-    }
+    } 
 })
